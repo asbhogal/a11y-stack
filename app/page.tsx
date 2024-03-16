@@ -1,3 +1,3 @@
 export default function Page() {
-  return <h1>Next.js and TypeScript Boilerplate</h1>;
+  return <h1 className="text-center">Next.js and TypeScript Boilerplate</h1>;
 }
