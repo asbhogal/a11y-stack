@@ -1,0 +1,57 @@
+{
+  "name": "nextjs-typescript-storybook-boilerplate",
+  "version": "1.0.0",
+  "description": "An opinionated boilerplate template built using TypeScript, Next.js (App router), Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod and Husky",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "npx prettier . --write",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asbhogal/Nextjs-TypeScript-Storybook-Boilerplate.git"
+  },
+  "keywords": [
+    "nextjs",
+    "typescript",
+    "storybook",
+    "playwright",
+    "react-hook-form",
+    "zod",
+    "husky",
+    "a11y",
+    "testing",
+    "boilerplate",
+    "template",
+    "app",
+    "router"
+  ],
+  "author": "Aman Singh Bhogal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asbhogal/Nextjs-TypeScript-Storybook-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/asbhogal/Nextjs-TypeScript-Storybook-Boilerplate#readme",
+  "dependencies": {
+    "next": "^14.1.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.28",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.1.3",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "3.2.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2"
+  }
+}
