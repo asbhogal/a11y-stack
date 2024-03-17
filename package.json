@@ -1,7 +1,8 @@
 {
-  "name": "nextjs-typescript-storybook-boilerplate",
+  "name": "a11y-stack",
   "version": "1.0.0",
-  "description": "An opinionated boilerplate template built using TypeScript, Next.js (App router), Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod and Husky",
+  "description": "Accessible, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky. ",
+  "author": "Aman Singh Bhogal",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
@@ -15,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asbhogal/Nextjs-TypeScript-Storybook-Boilerplate.git"
+    "url": "git+https://github.com/asbhogal/a11y-stack.git"
   },
   "keywords": [
     "nextjs",
@@ -30,14 +31,14 @@
     "boilerplate",
     "template",
     "app",
-    "router"
+    "router",
+    "linting"
   ],
-  "author": "Aman Singh Bhogal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/asbhogal/Nextjs-TypeScript-Storybook-Boilerplate/issues"
+    "url": "https://github.com/asbhogal/a11y-stack/issues"
   },
-  "homepage": "https://github.com/asbhogal/Nextjs-TypeScript-Storybook-Boilerplate#readme",
+  "homepage": "https://github.com/asbhogal/a11y-stack#readme",
   "dependencies": {
     "@axe-core/playwright": "^4.8.5",
     "@hookform/resolvers": "^3.3.4",
