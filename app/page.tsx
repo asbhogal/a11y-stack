@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Next.js and TypeScript Boilerplate",
+  title: "a11y stack | Modular, Extensive, Semantic",
   description:
-    "A boilerplate for Next.js and TypeScript projects, includes Tailwind, Shadcn, Storybook, React Hook Form, Zod & Husky",
+    "Accessibility-focused, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky.",
 };
 
 export default function Page() {
-  return <h1 className="text-center">Next.js and TypeScript Boilerplate</h1>;
+  return <h1 className="text-center">Website Under Construction</h1>;
 }
