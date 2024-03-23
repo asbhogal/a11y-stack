@@ -43,7 +43,7 @@ export default function Subscribe() {
                 <Input placeholder="example@example.com" {...field} />
               </FormControl>
               <FormDescription>
-                Sign up to our mailing list. We&quot;ll never share your email
+                Sign up to our mailing list. We&apos;ll never share your email
                 with anyone else.
               </FormDescription>
               <FormMessage className="error-message" />
