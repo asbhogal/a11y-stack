@@ -45,6 +45,40 @@ export default function Contact() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
+        <div className="grid cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="firstName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>First Name</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormDescription className="sr-only">
+                  Enter your first name
+                </FormDescription>
+                <FormMessage className="error-message" />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="lastName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Last Name</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormDescription className="sr-only">
+                  Enter your last name
+                </FormDescription>
+                <FormMessage className="error-message" />
+              </FormItem>
+            )}
+          />
+        </div>
         <FormField
           control={form.control}
           name="email"
@@ -56,38 +90,6 @@ export default function Contact() {
               </FormControl>
               <FormDescription className="sr-only">
                 Enter your email address
-              </FormDescription>
-              <FormMessage className="error-message" />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="firstName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>First Name</FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormDescription className="sr-only">
-                Enter your first name
-              </FormDescription>
-              <FormMessage className="error-message" />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="lastName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Last Name</FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormDescription className="sr-only">
-                Enter your last name
               </FormDescription>
               <FormMessage className="error-message" />
             </FormItem>

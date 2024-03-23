@@ -76,7 +76,6 @@ export function Billing() {
     <div className="flex flex-col md:flex-row gap-8 w-full">
       <div>
         <h1>Checkout</h1>
-
         <Form {...form}>
           <form
             className="flex flex-col gap-4 sm:gap-6"

@@ -56,7 +56,7 @@ export default function LogIn() {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input type="password" placeholder="password" {...field} />
+                <Input type="password" placeholder="Password" {...field} />
               </FormControl>
               <FormDescription className="sr-only">
                 Enter your password
