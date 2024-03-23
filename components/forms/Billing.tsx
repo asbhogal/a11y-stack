@@ -29,12 +29,12 @@ const billingFormSchema = z.object({
   cardName: z.string().min(5, { message: "Must be 5 or more characters long" }),
   cardNumber: z
     .string()
-    .min(5, { message: "Must be 5 or more characters long" }),
+    .min(4, { message: "Must be 4 or more characters long" }),
   cardCVV: z.string().min(3).max(3, { message: "Must be 3 characters long" }),
   cardExpiryMonth: z
     .string()
     .min(1)
-    .max(1, { message: "Must be 2 characters long" }),
+    .max(2, { message: "Must be at least 1 character long" }),
   cardExpiryYear: z
     .string()
     .min(2)
