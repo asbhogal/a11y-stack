@@ -2,7 +2,7 @@
 
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import {
   Form,
   FormControl,
@@ -33,8 +33,8 @@ const billingFormSchema = z.object({
   cardCVV: z.string().min(3).max(3, { message: "Must be 3 characters long" }),
   cardExpiryMonth: z
     .string()
-    .min(2)
-    .max(2, { message: "Must be 2 characters long" }),
+    .min(1)
+    .max(1, { message: "Must be 2 characters long" }),
   cardExpiryYear: z
     .string()
     .min(2)
@@ -245,16 +245,10 @@ export function Billing() {
                 <FormItem>
                   <FormLabel className="form-label">Card Number</FormLabel>
                   <FormControl>
-                    <Controller
-                      control={form.control}
-                      name="cardNumber"
-                      render={({ field }) => (
-                        <Input
-                          placeholder="1234 1234 1234 1234"
-                          type="number"
-                          {...field}
-                        />
-                      )}
+                    <Input
+                      placeholder="1234 1234 1234 1234"
+                      type="number"
+                      {...field}
                     />
                   </FormControl>
                   <FormDescription className="sr-only">
@@ -274,13 +268,7 @@ export function Billing() {
                       Card Expiry Month
                     </FormLabel>
                     <FormControl>
-                      <Controller
-                        control={form.control}
-                        name="cardExpiryMonth"
-                        render={({ field }) => (
-                          <Input placeholder="MM" type="number" {...field} />
-                        )}
-                      />
+                      <Input placeholder="MM" type="number" {...field} />
                     </FormControl>
                     <FormDescription className="sr-only">
                       Enter your card expiry month
@@ -298,13 +286,7 @@ export function Billing() {
                       Card Expiry Year
                     </FormLabel>
                     <FormControl>
-                      <Controller
-                        control={form.control}
-                        name="cardExpiryYear"
-                        render={({ field }) => (
-                          <Input placeholder="YY" type="number" {...field} />
-                        )}
-                      />
+                      <Input placeholder="YY" type="number" {...field} />
                     </FormControl>
                     <FormDescription className="sr-only">
                       Enter your card expiry year
@@ -320,13 +302,7 @@ export function Billing() {
                   <FormItem>
                     <FormLabel className="form-label">CVV</FormLabel>
                     <FormControl>
-                      <Controller
-                        control={form.control}
-                        name="cardCVV"
-                        render={({ field }) => (
-                          <Input placeholder="CVV" type="number" {...field} />
-                        )}
-                      />
+                      <Input placeholder="CVV" type="number" {...field} />
                     </FormControl>
                     <FormDescription className="sr-only">
                       Enter your card expiry year
