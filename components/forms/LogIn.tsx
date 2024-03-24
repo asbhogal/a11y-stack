@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form";
 import { Input } from "../ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "../ui/button";
+import { toast } from "sonner";
 
 export default function LogIn() {
   const logInFormSchema = z.object({
@@ -29,6 +30,7 @@ export default function LogIn() {
 
   function onSubmit(data: z.infer<typeof logInFormSchema>) {
     console.log(data);
+    toast("Log in successful");
   }
   return (
     <Form {...form}>

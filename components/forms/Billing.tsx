@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { toast } from "sonner";
 
 const billingFormSchema = z.object({
   firstName: z
@@ -70,6 +71,7 @@ export function Billing() {
       cardCVV: parseInt(data.cardCVV, 10),
     };
     console.log(convertedData);
+    toast("Order confirmed");
   }
 
   return (

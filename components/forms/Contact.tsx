@@ -13,6 +13,7 @@ import {
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
+import { toast } from "sonner";
 
 export default function Contact() {
   const contactFormSchema = z.object({
@@ -40,6 +41,7 @@ export default function Contact() {
 
   function onSubmit(data: z.infer<typeof contactFormSchema>) {
     console.log(data);
+    toast("Message sent. We will get back to you shortly");
   }
 
   return (

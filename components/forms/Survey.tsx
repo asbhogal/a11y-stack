@@ -12,6 +12,7 @@ import {
 } from "../ui/form";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Button } from "../ui/button";
+import { toast } from "sonner";
 
 const rating: readonly [
   "very dissatisfied",
@@ -40,6 +41,7 @@ export default function Survey() {
 
   function onSubmit(data: z.infer<typeof surveyFormSchema>) {
     console.log(data);
+    toast("Thank you for your feedback!");
   }
 
   return (

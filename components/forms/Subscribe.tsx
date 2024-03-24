@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 
 export default function Subscribe() {
   const subscribeFormSchema = z.object({
@@ -29,6 +30,7 @@ export default function Subscribe() {
 
   function onSubmit(data: z.infer<typeof subscribeFormSchema>) {
     console.log(data);
+    toast("Email sent. Please check your inbox to confirm your subscription.");
   }
   return (
     <Form {...form}>
