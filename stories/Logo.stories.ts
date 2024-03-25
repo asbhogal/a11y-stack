@@ -13,4 +13,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const MainLogo: Story = {};
+export const MainLogo: Story = {
+  args: {
+    title: "a11y-stack logo",
+    description:
+      "The words 'a11y' and 'stack' in alternate white and blue color",
+  },
+};
