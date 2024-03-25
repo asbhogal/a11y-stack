@@ -7,3 +7,7 @@
     @apply text-turkishRed;
   }
 }
+
+.accent {
+  color: #e7f05a;
+}
