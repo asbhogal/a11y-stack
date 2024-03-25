@@ -63,7 +63,7 @@ export default function Survey() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col gap-6"
+        className="flex flex-col gap-4"
       >
         <FormField
           control={form.control}
@@ -111,20 +111,16 @@ export default function Survey() {
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className="flex gap-4"
+                  className="flex justify-between gap-4"
                 >
                   {rating.map((rating) => (
                     <FormItem
                       key={rating}
-                      className="flex flex-col gap-4items-center"
+                      className="flex flex-col items-center"
                     >
                       <FormLabel className="capitalize">{rating}</FormLabel>
                       <FormControl>
-                        <RadioGroupItem
-                          aria-label={rating}
-                          value={rating}
-                          className=""
-                        />
+                        <RadioGroupItem aria-label={rating} value={rating} />
                       </FormControl>
                       <FormDescription className="sr-only">
                         {rating}

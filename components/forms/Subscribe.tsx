@@ -34,7 +34,10 @@ export default function Subscribe() {
   }
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-4"
+      >
         <FormField
           control={form.control}
           name="email"
@@ -52,7 +55,9 @@ export default function Subscribe() {
             </FormItem>
           )}
         />
-        <Button type="submit">Subscribe</Button>
+        <Button type="submit" className="w-fit">
+          Subscribe
+        </Button>
       </form>
     </Form>
   );

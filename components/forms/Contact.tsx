@@ -46,7 +46,10 @@ export default function Contact() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-4"
+      >
         <div className="grid cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
