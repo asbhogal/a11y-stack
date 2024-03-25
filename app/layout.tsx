@@ -2,6 +2,7 @@ import Header from "@/components/globals/Header";
 import "./globals.css";
 import Footer from "@/components/globals/Footer";
 import Container from "@/components/globals/Container";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function RootLayout({
   children,
@@ -14,6 +15,7 @@ export default function RootLayout({
         <Header />
         <Container>{children}</Container>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
