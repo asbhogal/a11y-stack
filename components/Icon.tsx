@@ -17,8 +17,8 @@ export default function Icon({
 }: IconProps) {
   return (
     <svg
-      aria-hidden={inButton && "true"}
-      focusable={inButton && "false"}
+      aria-hidden={inButton ? "true" : undefined}
+      focusable={inButton ? "false" : undefined}
       role="img"
       aria-describedby="icon icon-description"
       className={[className, "icon"].join(" ")}
