@@ -1,5 +1,6 @@
 interface IconProps {
   children: React.ReactNode;
+  className?: string;
   inButton?: boolean;
   title: string;
   description: string;
@@ -8,6 +9,7 @@ interface IconProps {
 
 export default function Icon({
   children,
+  className,
   inButton = false,
   title,
   description,
@@ -19,10 +21,11 @@ export default function Icon({
       focusable={inButton && "false"}
       role="img"
       aria-describedby="icon icon-description"
+      className={[className, "icon"].join(" ")}
       {...svgProps}
     >
       <title id="my-title">{title}</title>
-      <desc id="my-descrip">{description}</desc>
+      <desc id="my-description">{description}</desc>
       {children}
     </svg>
   );

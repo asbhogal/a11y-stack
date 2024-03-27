@@ -1,17 +1,67 @@
 import Link from "next/link";
 import Icon from "../Icon";
 
+type LinksType = {
+  id: number;
+  label: string;
+  href: string;
+};
+
+const links: LinksType[] = [
+  {
+    id: 1,
+    label: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
+    label: "Introduction",
+    href: "/introduction",
+  },
+  {
+    id: 3,
+    label: "Installation",
+    href: "/installation",
+  },
+  {
+    id: 4,
+    label: "Components",
+    href: "/components",
+  },
+  {
+    id: 5,
+    label: "Support",
+    href: "/support",
+  },
+  {
+    id: 6,
+    label: "Contribute",
+    href: "/contribute",
+  },
+];
+
 export default function Header() {
   return (
-    <header className="flex items-end">
+    <header className="flex items-center justify-between p-4">
+      <nav>
+        <ul className="flex gap-4 list-none">
+          {links.map((link) => (
+            <li key={link.id} className="">
+              <Link href={link.href} className="font-mono uppercase">
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
       <Link href="https://github.com/asbhogal/a11y-stack">
         <span className="sr-only">GitHub repo</span>
         <Icon
           title="GitHub logo"
           description="A silhouette of a cat"
+          className="h-10 w-10"
           svgProps={{
-            width: "98",
-            height: "96",
+            viewBox: "0 0 98 96",
             xmlns: "http://www.w3.org/2000/svg",
           }}
         >

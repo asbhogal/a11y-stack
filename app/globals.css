@@ -6,6 +6,10 @@
   .error-message {
     @apply text-turkishRed;
   }
+
+  .icon {
+    @apply w-12;
+  }
 }
 
 .accent {
