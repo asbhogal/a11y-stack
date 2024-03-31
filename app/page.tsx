@@ -129,13 +129,10 @@ export default function Page() {
       </div>
 
       <div className="min-h-dvh">
-        <h3 className="text-4xl"></h3>
         <div className="flex flex-col gap-4">
-          <div className="">
-            <h3>
-              <span className="accent">out of the box</span>
-            </h3>
-          </div>
+          <h3>
+            <span className="accent">out of the box</span>
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Feature
               title="Next.js"
