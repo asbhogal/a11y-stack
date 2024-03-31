@@ -1,65 +1,89 @@
-import Link from "next/link";
+import Link from "./Link";
 import Icon from "../Icon";
 
 type LinksType = {
   id: number;
-  label: string;
+  title: string;
   href: string;
+  label: string;
 };
 
-const links: LinksType[] = [
+export const links: LinksType[] = [
   {
     id: 1,
-    label: "Home",
+    title: "Home",
     href: "/",
+    label: "home",
   },
   {
     id: 2,
-    label: "Introduction",
+    title: "Introduction",
     href: "/introduction",
+    label: "introduction",
   },
   {
     id: 3,
-    label: "Installation",
+    title: "Installation",
     href: "/installation",
+    label: "installation",
   },
   {
     id: 4,
-    label: "Components",
+    title: "Components",
     href: "/components",
+    label: "components",
   },
   {
     id: 5,
-    label: "Support",
+    title: "Support",
     href: "/support",
+    label: "support",
   },
   {
     id: 6,
-    label: "Contribute",
+    title: "Contribute",
     href: "/contribute",
+    label: "contribute",
   },
 ];
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between p-4">
+    <header className="flex flex-col p-4">
       <nav>
-        <ul className="flex gap-4 list-none">
+        <ul className="flex flex-col gap-1 list-none">
           {links.map((link) => (
             <li key={link.id} className="">
-              <Link href={link.href} className="font-mono uppercase">
+              <Link
+                type="tertiary"
+                related={false}
+                ariaLabel={link.label}
+                label={link.label}
+                title={link.title}
+                external={false}
+                href={link.href}
+                className="font-mono uppercase"
+              >
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
       </nav>
-      <Link href="https://github.com/asbhogal/a11y-stack">
+      <Link
+        label="github repo"
+        title="GitHub Repo"
+        ariaLabel="GitHub Repo"
+        external
+        related={true}
+        type="tertiary"
+        href="https://github.com/asbhogal/a11y-stack"
+      >
         <span className="sr-only">GitHub repo</span>
         <Icon
           title="GitHub logo"
           description="A silhouette of a cat"
-          className="h-10 w-10"
+          className="h-6 w-6"
           svgProps={{
             viewBox: "0 0 98 96",
             xmlns: "http://www.w3.org/2000/svg",

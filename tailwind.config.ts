@@ -26,9 +26,11 @@ const config = {
     },
     colors: {
       black: "#000000",
+      vampireBlack: "#0b0b0b",
       chineseBlack: "#101010",
       gray: "#808080",
       turkishRed: "#C8102E",
+      accent: "#e7f05a",
       antiFlashWhite: "#f1f1f1",
       lotion: "#fafafa",
     },

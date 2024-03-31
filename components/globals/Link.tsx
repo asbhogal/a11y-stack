@@ -1,32 +1,52 @@
-import Icon from "../globals/Icon";
+import Icon from "../Icon";
 
-interface LinkProps {
-  primary?: boolean;
+type LinkPropsBase = {
   className?: string;
   children: React.ReactNode;
-  icon?: boolean;
   label: string;
   href: string;
+  title: string;
   ariaLabel: string;
   external: boolean;
   related: boolean;
-  rel: string;
-}
+  rel?: string;
+  type: "primary" | "secondary" | "tertiary";
+};
+
+type LinkPropsWithIcon = LinkPropsBase & {
+  icon: true;
+  iconTitle: string;
+  iconDescription: string;
+};
+
+type LinkPropsWithoutIcon = LinkPropsBase & {
+  icon?: false;
+};
+
+type LinkProps = LinkPropsWithIcon | LinkPropsWithoutIcon;
 
 export default function Link({
-  primary = false,
   className,
   label,
   href,
-  icon,
   ariaLabel,
   children,
   related = false,
   rel,
+  title,
   external = false,
+  type = "primary",
   ...props
 }: LinkProps) {
-  let mode = icon ? "shop-link" : primary ? "primary-link" : "secondary-link";
+  const hasIcon = "iconTitle" in props && "iconDescription" in props;
+
+  const typeClassMap = {
+    primary: "primary-link",
+    secondary: "secondary-link",
+    tertiary: "tertiary-link",
+  };
+
+  const linkClass = typeClassMap[type];
 
   return (
     <a
@@ -34,25 +54,27 @@ export default function Link({
       aria-label={external ? `${ariaLabel} (Opens in a new tab)` : ariaLabel}
       target={external ? "_blank" : "_self"}
       rel={related ? "noopener noreferrer" : undefined}
+      title={title}
       className={[
         "flex",
         "items-center",
         "gap-4",
-        "py-4",
-        "px-8",
+        "p-2",
+        "rounded-md",
         "w-max",
         "uppercase",
         "font-bold",
         "tracking-[0.0625rem]",
         "transition",
+        type,
         className,
-        mode,
+        linkClass,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      {label}
-      {icon && (
+      {children}
+      {hasIcon && (
         <Icon
           svgProps={{
             width: "7",
@@ -61,6 +83,8 @@ export default function Link({
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
           }}
+          title={props.iconTitle}
+          description={props.iconDescription}
         >
           <path
             id="Path 2"
