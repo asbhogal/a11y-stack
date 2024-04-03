@@ -49,7 +49,7 @@ export const links: LinksType[] = [
 
 export default function Header() {
   return (
-    <header className="flex flex-col p-4">
+    <header className="flex flex-col p-4 border-r border-accent">
       <nav>
         <ul className="flex flex-col gap-1 list-none">
           {links.map((link) => (

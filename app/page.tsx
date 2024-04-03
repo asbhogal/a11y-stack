@@ -41,7 +41,11 @@ export default function Page() {
               An <span className="accent">accessibility-focused,</span>{" "}
               type-safe Next.js frontend framework stack{" "}
             </h2>
-            <Code copy code="npx create-a11y-stack@latest" />
+            <Code
+              className="border border-accent"
+              copy
+              code="npx create-a11y-stack@latest"
+            />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-fit">
               <Link
                 type="primary"
@@ -100,7 +104,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="min-h-dvh">
+      <div className="flex flex-col gap-6 min-h-dvh">
         <h3>
           {" "}
           created to solve{" "}
@@ -126,6 +130,18 @@ export default function Page() {
           With one command, scaffold a modern, a11y-focused Next.js frontend
           framework and spin up a dev server, ready for development
         </p>
+
+        <Link
+          type="primary"
+          ariaLabel="get-started"
+          label="get-started"
+          title="Get started"
+          href="installation"
+          external={false}
+          related
+        >
+          Get started
+        </Link>
       </div>
 
       <div className="min-h-dvh">
@@ -133,28 +149,28 @@ export default function Page() {
           <h3>
             <span className="accent">out of the box</span>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <Feature
               title="Next.js"
-              feature="A full stack framework built upon React, Next.js offers dynamic routing, API routes, extensibility with database platforms and SEO ____"
+              feature="A full stack framework built upon React, Next.js offers dynamic routing, API routes, extensibility with database platforms and SEO capabilities under-the-hood"
             >
               <Nextjs />
             </Feature>
             <Feature
               title="TypeScript"
-              feature="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              feature="A statically-typed superset of Javascript which adds additional support for types to help catch errors and bugs during compile time."
             >
               <TypeScript />
             </Feature>
             <Feature
               title="Storybook"
-              feature="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              feature="An extensive library which allows isolated building of UI components, including a11y, interaction and visual testing."
             >
               <Storybook />
             </Feature>
             <Feature
               title="Tailwind CSS"
-              feature="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              feature="A mobile-first responsive CSS framework library which uses pre-set utility classes for rapid rendering of component styling."
             >
               <Tailwind />
             </Feature>
@@ -172,7 +188,7 @@ export default function Page() {
             </Feature>
             <Feature
               title="Zod"
-              feature="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              feature="TypeScript-first schema declaration and validation library which infers types to reduce duplicate type declarations and ensure data integrity ____ shape of the data."
             >
               <Zod />
             </Feature>
@@ -184,19 +200,19 @@ export default function Page() {
             </Feature>
             <Feature
               title="Prettier"
-              feature="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              feature="Opinionated code formatter which ensures code follows a consistent style."
             >
               <Prettier />
             </Feature>
             <Feature
               title="ESLint"
-              feature="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              feature="A pluggable and configurable linting library for identifying and reporting patterns in JavaScript in order to ensure code consistency and reduce bugs."
             >
               <ESLint />
             </Feature>
             <Feature
               title="Husky"
-              feature="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              feature="Enables the ability to run linting, testing and formatting of code upon committing to source control."
             >
               <Husky />
             </Feature>
