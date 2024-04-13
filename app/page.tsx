@@ -1,5 +1,3 @@
-import Icon from "@/components/Icon";
-import Navigation from "@/components/globals/Header";
 import Code from "@/components/misc/Code";
 import Feature from "@/components/misc/Feature";
 import Nextjs from "@/components/misc/icons/Nextjs";
@@ -16,20 +14,15 @@ import Prettier from "@/components/misc/icons/Prettier";
 import ESLint from "@/components/misc/icons/ESLint";
 import Husky from "@/components/misc/icons/Husky";
 import Link from "@/components/globals/Link";
-import Marquee from "react-fast-marquee";
 import Pagination from "@/components/globals/Pagination";
+import Accent from "@/components/globals/Accent";
 
 export const metadata: Metadata = {
-  title: "a11y stack | Modular, Extensive, Semantic",
+  title: "a11y stack | Accessibility-focused, typesafe Next.js stack",
   description:
     "Accessibility-focused, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky.",
 };
 
-const images = [
-  "https://images.unsplash.com/photo-1711703049564-907b88e2005a?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1711636418389-1ee93ebd56fb?q=80&w=3862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1711703049564-907b88e2005a?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-];
 export default function Page() {
   return (
     <>
@@ -41,6 +34,9 @@ export default function Page() {
               An <span className="accent">accessibility-focused,</span>{" "}
               type-safe Next.js frontend framework stack{" "}
             </h2>
+            <p>
+              Modular <Accent>|</Accent> Semantic <Accent>|</Accent> Extensible
+            </p>
             <Code
               className="border border-accent"
               copy
@@ -107,11 +103,10 @@ export default function Page() {
       <div className="flex flex-col gap-6 min-h-dvh">
         <h3>
           {" "}
-          created to solve{" "}
-          <span className="accent">three main developer pain points</span>
+          created to solve <Accent>three main developer pain points</Accent>
         </h3>
         <ol className="marker:text-accent list-decimal ml-8">
-          <li className="">
+          <li>
             time spent scaffolding an app with several dependencies and scripts
             to run before actually building, wasting valuable development time
           </li>
@@ -126,7 +121,7 @@ export default function Page() {
           </li>
         </ol>
 
-        <p className="text-3xl">
+        <p>
           With one command, scaffold a modern, a11y-focused Next.js frontend
           framework and spin up a dev server, ready for development
         </p>
@@ -144,12 +139,64 @@ export default function Page() {
         </Link>
       </div>
 
+      <div className="flex flex-col gap-6 min-h-dvh">
+        <h3>
+          out of the <Accent>box</Accent>{" "}
+        </h3>
+        <ul className="list-disc">
+          <li>
+            Next.js 14 <Accent>(app router)</Accent>
+          </li>
+          <li>
+            Example Next.js <Accent>API routes</Accent>
+          </li>
+          <li>
+            <Accent>Stories</Accent> for components
+          </li>
+          <li>
+            a11y and interaction testing of pages and components within{" "}
+            <Accent>Storybook UI</Accent> & <Accent>Playwright UI</Accent>
+          </li>
+          <li>
+            <Accent>Shadcn/ui components</Accent> (built on Radix primitives)
+          </li>
+          <li>
+            A selection of <Accent>WCAG-compliant forms</Accent> using
+            React-Hook-Form and Zod (Billing, Contact, Login, Subscribe, Survey)
+          </li>
+          <li>
+            <Accent>Custom WCAG-compliant components</Accent> (incl. links and
+            icons)
+          </li>
+          <li>
+            <Accent>Tailwind CSS</Accent>, configured with Storybook for styling
+            in isolation
+          </li>
+          <li>
+            <Accent>Linting, formatting and testing</Accent> using ES Lint,
+            lint-staged and Prettier
+          </li>
+          <li>
+            Husky configured to{" "}
+            <Accent>
+              run linting and e2e and a11y testing prior to commit
+            </Accent>
+          </li>
+          <li>
+            <Accent>Locally hosted</Accent> fonts
+          </li>
+          <li>
+            Built <Accent>ground-up</Accent> using TypeScript
+          </li>
+        </ul>
+      </div>
+
       <div className="min-h-dvh">
         <div className="flex flex-col gap-4">
           <h3>
-            <span className="accent">out of the box</span>
+            the <span className="accent">stack</span>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Feature
               title="Next.js"
               feature="A full stack framework built upon React, Next.js offers dynamic routing, API routes, extensibility with database platforms and SEO capabilities under-the-hood"
