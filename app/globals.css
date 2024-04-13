@@ -2,8 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    font-size: clamp(2.625rem, 2.1429rem + 2.4107vw, 6rem);
+  }
+
+  h2 {
+    font-size: clamp(2.625rem, 1.8571rem + 3.8393vw, 8rem);
+    line-height: 1;
+  }
+
+  h3 {
+    font-size: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
+    line-height: 1;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  .accent {
+    @apply text-accent;
+  }
+}
+
 @layer components {
   .error-message {
     @apply text-turkishRed;
   }
+
+  .icon {
+    @apply w-12;
+  }
+
+  .primary-link {
+    @apply bg-accent;
+    @apply text-vampireBlack;
+    @apply border border-vampireBlack;
+    &:hover {
+      @apply bg-vampireBlack;
+      @apply text-accent;
+      @apply border border-accent;
+    }
+  }
+
+  .secondary-link {
+    @apply bg-vampireBlack;
+    @apply text-accent;
+    @apply border border-accent;
+    &:hover {
+      @apply bg-accent;
+      @apply text-vampireBlack;
+      @apply border border-vampireBlack;
+    }
+  }
+
+  .tertiary-link {
+    @apply text-antiFlashWhite;
+    @apply border border-vampireBlack;
+    &:hover {
+      @apply bg-vampireBlack;
+      @apply text-accent;
+    }
+  }
+
+  ol {
+    @apply text-3xl;
+  }
 }
+
+/* .marquee {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+} */
