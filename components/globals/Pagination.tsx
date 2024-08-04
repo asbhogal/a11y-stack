@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "./Link";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { links } from "./Header";
-import { useRouter, usePathname } from "next/navigation";
 
 export default function Pagination() {
   const currentPath = usePathname();
@@ -18,26 +18,14 @@ export default function Pagination() {
       {previousPage && (
         <Link
           title={previousPage.title}
-          ariaLabel={previousPage.label}
-          external={false}
-          label={previousPage.label}
           href={previousPage.href}
-          related
           type="tertiary"
         >
           {previousPage.title}
         </Link>
       )}
       {nextPage && (
-        <Link
-          title={nextPage.title}
-          ariaLabel={nextPage.label}
-          external={false}
-          label={nextPage.label}
-          href={nextPage.href}
-          related
-          type="tertiary"
-        >
+        <Link title={nextPage.title} href={nextPage.href} type="tertiary">
           {nextPage.title}
         </Link>
       )}

@@ -6,12 +6,12 @@ export default function Tailwind() {
       title="Tailwind logo"
       description="Two blue wavy lines stacks on top of one another"
       svgProps={{
-        xmlns: "http://www.w3.org/2000/svg",
         fill: "none",
         viewBox: "0 0 54 33",
+        xmlns: "http://www.w3.org/2000/svg",
       }}
     >
-      <g clip-path="url(#prefix__clip0)">
+      <g clipPath="url(#prefix__clip0)">
         <path
           fill="#38bdf8"
           fill-rule="evenodd"

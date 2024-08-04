@@ -5,7 +5,7 @@ export default function TypeScript() {
     <Icon
       title="TypeScript logo"
       description="The letters T and S in white inside a blue box"
-      svgProps={{ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 128 128" }}
+      svgProps={{ viewBox: "0 0 128 128", xmlns: "http://www.w3.org/2000/svg" }}
     >
       <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z" />
       <path

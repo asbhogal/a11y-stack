@@ -5,7 +5,7 @@ import Disclaimer from "./Disclaimer";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-4 w-full absolute bottom-0 p-10 h-20">
+    <footer className="flex flex-col gap-4 w-full p-8">
       <div className="flex items-center justify-between ">
         <p>© a11y-stack | 2024</p>
         <WebsiteCarbonBadge dark />

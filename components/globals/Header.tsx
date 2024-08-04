@@ -1,4 +1,4 @@
-import Link from "./Link";
+import Link from "next/link";
 import Icon from "../Icon";
 
 type LinksType = {
@@ -10,57 +10,53 @@ type LinksType = {
 
 export const links: LinksType[] = [
   {
-    id: 1,
-    title: "Home",
     href: "/",
+    id: 1,
     label: "home",
+    title: "Home",
   },
   {
-    id: 2,
-    title: "Introduction",
     href: "/introduction",
+    id: 2,
     label: "introduction",
+    title: "Introduction",
   },
   {
-    id: 3,
-    title: "Installation",
     href: "/installation",
+    id: 3,
     label: "installation",
+    title: "Installation",
   },
   {
-    id: 4,
-    title: "Components",
     href: "/components",
+    id: 4,
     label: "components",
+    title: "Components",
   },
   {
-    id: 5,
-    title: "Support",
     href: "/support",
+    id: 5,
     label: "support",
+    title: "Support",
   },
   {
-    id: 6,
-    title: "Contribute",
     href: "/contribute",
+    id: 6,
     label: "contribute",
+    title: "Contribute",
   },
 ];
 
 export default function Header() {
   return (
-    <header className="flex flex-col p-4 border-r border-accent">
+    <header className="flex p-8 justify-between">
       <nav>
-        <ul className="flex flex-col gap-1 list-none">
+        <ul className="flex flex-col md:flex-row gap-4 list-none">
           {links.map((link) => (
             <li key={link.id} className="">
               <Link
                 type="tertiary"
-                related={false}
-                ariaLabel={link.label}
-                label={link.label}
                 title={link.title}
-                external={false}
                 href={link.href}
                 className="font-mono uppercase"
               >
@@ -71,11 +67,7 @@ export default function Header() {
         </ul>
       </nav>
       <Link
-        label="github repo"
         title="GitHub Repo"
-        ariaLabel="GitHub Repo"
-        external
-        related={true}
         type="tertiary"
         href="https://github.com/asbhogal/a11y-stack"
       >

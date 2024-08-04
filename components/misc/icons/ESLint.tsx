@@ -5,7 +5,7 @@ export default function ESLint() {
     <Icon
       title="ESLint logo"
       description="A white hexagon inside a solid purple hexagon at alternate angles"
-      svgProps={{ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 128 128" }}
+      svgProps={{ viewBox: "0 0 128 128", xmlns: "http://www.w3.org/2000/svg" }}
     >
       <path
         fill="#4b32c3"

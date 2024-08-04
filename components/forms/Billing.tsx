@@ -12,25 +12,12 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { toast } from "sonner";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { toast } from "sonner";
 
 const billingFormSchema = z.object({
-  firstName: z
-    .string()
-    .min(3, { message: "Must be 3 or more characters long" }),
-  lastName: z.string().min(3, { message: "Must be 3 or more characters long" }),
-  email: z.string().email(),
-  cell: z.string().min(5, { message: "Must be 5 or more numbers long" }),
   address: z.string().min(5, { message: "Must be 5 or more characters long" }),
-  zip: z.string().min(5, { message: "Must be 5 or more characters long" }),
-  city: z.string().min(5, { message: "Must be 5 or more characters long" }),
-  country: z.string().min(3, { message: "Must be 5 or more characters long" }),
-  cardName: z.string().min(5, { message: "Must be 5 or more characters long" }),
-  cardNumber: z
-    .string()
-    .min(4, { message: "Must be 4 or more characters long" }),
   cardCVV: z.string().min(3).max(3, { message: "Must be 3 characters long" }),
   cardExpiryMonth: z
     .string()
@@ -40,36 +27,50 @@ const billingFormSchema = z.object({
     .string()
     .min(2)
     .max(2, { message: "Must be 2 characters long" }),
+  cardName: z.string().min(5, { message: "Must be 5 or more characters long" }),
+  cardNumber: z
+    .string()
+    .min(4, { message: "Must be 4 or more characters long" }),
+  cell: z.string().min(5, { message: "Must be 5 or more numbers long" }),
+  city: z.string().min(5, { message: "Must be 5 or more characters long" }),
+  country: z.string().min(3, { message: "Must be 5 or more characters long" }),
+  email: z.string().email(),
+  firstName: z
+    .string()
+    .min(3, { message: "Must be 3 or more characters long" }),
+  lastName: z.string().min(3, { message: "Must be 3 or more characters long" }),
+  zip: z.string().min(5, { message: "Must be 5 or more characters long" }),
 });
 
 export function Billing() {
   const form = useForm<z.infer<typeof billingFormSchema>>({
-    resolver: zodResolver(billingFormSchema),
     defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      cell: "",
       address: "",
-      zip: "",
-      city: "",
-      country: "",
-      cardName: "",
-      cardNumber: "",
+      cardCVV: "",
       cardExpiryMonth: "",
       cardExpiryYear: "",
-      cardCVV: "",
+      cardName: "",
+      cardNumber: "",
+      cell: "",
+      city: "",
+      country: "",
+      email: "",
+      firstName: "",
+      lastName: "",
+      zip: "",
     },
+    resolver: zodResolver(billingFormSchema),
   });
 
   function onSubmit(data: z.infer<typeof billingFormSchema>) {
     const convertedData = {
       ...data,
-      cardNumber: parseInt(data.cardNumber, 10),
+      cardCVV: parseInt(data.cardCVV, 10),
       cardExpiryMonth: parseInt(data.cardExpiryMonth, 10),
       cardExpiryYear: parseInt(data.cardExpiryYear, 10),
-      cardCVV: parseInt(data.cardCVV, 10),
+      cardNumber: parseInt(data.cardNumber, 10),
     };
+    // eslint-disable-next-line no-console
     console.log(convertedData);
     toast("Order confirmed");
   }

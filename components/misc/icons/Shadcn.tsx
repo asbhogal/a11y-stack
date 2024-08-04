@@ -5,9 +5,9 @@ export default function Shadcn() {
     <Icon
       title="shadcn/ui logo"
       description="Two adjacent white lines at an angle, one shorter than the other, against a black backdrop"
-      svgProps={{ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 256 256" }}
+      svgProps={{ viewBox: "0 0 256 256", xmlns: "http://www.w3.org/2000/svg" }}
     >
-      <rect width="256" height="256" fill="none"></rect>
+      <rect width="256" height="256" fill="none" />
       <line
         x1="208"
         y1="128"
@@ -15,10 +15,10 @@ export default function Shadcn() {
         y2="208"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="16"
-      ></line>
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+      />
       <line
         x1="192"
         y1="40"
@@ -26,10 +26,10 @@ export default function Shadcn() {
         y2="192"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="16"
-      ></line>
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+      />
     </Icon>
   );
 }

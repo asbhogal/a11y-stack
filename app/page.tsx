@@ -13,19 +13,20 @@ import Playwright from "@/components/misc/icons/Playwright";
 import Prettier from "@/components/misc/icons/Prettier";
 import ESLint from "@/components/misc/icons/ESLint";
 import Husky from "@/components/misc/icons/Husky";
-import Link from "@/components/globals/Link";
 import Pagination from "@/components/globals/Pagination";
 import Accent from "@/components/globals/Accent";
+import Link from "next/link";
+import React from "react";
 
 export const metadata: Metadata = {
-  title: "a11y stack | Accessibility-focused, typesafe Next.js stack",
   description:
     "Accessibility-focused, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky.",
+  title: "a11y stack | Modular, Extensive, Semantic",
 };
 
 export default function Page() {
   return (
-    <>
+    <React.Fragment>
       <div className="flex flex-row min-h-dvh">
         <div className="flex flex-col gap-8 max-w-6xl">
           <h1 className="sr-only">a11y-stack | home page</h1>
@@ -43,26 +44,10 @@ export default function Page() {
               code="npx create-a11y-stack@latest"
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-fit">
-              <Link
-                type="primary"
-                ariaLabel="get-started"
-                label="get-started"
-                title="Get started"
-                href="installation"
-                external={false}
-                related
-              >
+              <Link title="Get started" href="installation">
                 Get started
               </Link>
-              <Link
-                type="secondary"
-                ariaLabel="support"
-                label="support"
-                title="Support"
-                href="support"
-                external={false}
-                related
-              >
+              <Link title="Support" href="support">
                 Support
               </Link>
             </div>
@@ -126,15 +111,7 @@ export default function Page() {
           framework and spin up a dev server, ready for development
         </p>
 
-        <Link
-          type="primary"
-          ariaLabel="get-started"
-          label="get-started"
-          title="Get started"
-          href="installation"
-          external={false}
-          related
-        >
+        <Link type="primary" title="Get started" href="installation">
           Get started
         </Link>
       </div>
@@ -267,6 +244,6 @@ export default function Page() {
         </div>
         <Pagination />
       </div>
-    </>
+    </React.Fragment>
   );
 }

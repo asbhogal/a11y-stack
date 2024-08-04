@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="flex gap-2 bg-vampireBlack text-antiFlashWhite relative">
+      <body className="flex flex-col gap-2 bg-vampireBlack text-antiFlashWhite relative">
         <Header />
         <Container>{children}</Container>
         <Footer />

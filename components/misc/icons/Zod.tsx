@@ -6,18 +6,18 @@ export default function Zod() {
       title="Zod logo"
       description="A diamond-shape with the letter 'Z' inside, with different accents of blue"
       svgProps={{
-        width: "100%",
         height: "100%",
-        viewBox: "0 0 1080 1080",
-        version: "1.1",
-        xmlns: "http://www.w3.org/2000/svg",
-        xmlnsXlink: "http://www.w3.org/1999/xlink",
-        xmlSpace: "preserve",
         style: {
-          fillRule: "evenodd",
           clipRule: "evenodd",
+          fillRule: "evenodd",
           strokeMiterlimit: "5",
         },
+        version: "1.1",
+        viewBox: "0 0 1080 1080",
+        width: "100%",
+        xmlSpace: "preserve",
+        xmlns: "http://www.w3.org/2000/svg",
+        xmlnsXlink: "http://www.w3.org/1999/xlink",
       }}
     >
       {" "}
@@ -85,8 +85,8 @@ export default function Zod() {
       </g>
       <g transform="matrix(0.110306,-0.0636855,0.0916929,0.158817,-1062.67,-824.113)">
         <rect
-          x={3083.23 as any}
-          y={8972.31 as any}
+          x={3083.23}
+          y={8972.31}
           width="3500.78"
           height="135.721"
           style={{ fill: "rgb(39,77,130)" }}

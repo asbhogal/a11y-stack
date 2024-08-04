@@ -2,12 +2,12 @@ import Contact from "@/components/forms/Contact";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Forms/Contact",
   component: Contact,
-  tags: ["autodocs"],
   parameters: {
     layout: "centered",
   },
+  tags: ["autodocs"],
+  title: "Forms/Contact",
 } satisfies Meta<typeof Contact>;
 
 export default meta;

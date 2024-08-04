@@ -5,7 +5,7 @@ export default function Nextjs() {
     <Icon
       title="Next.js logo"
       description="The Next.js logo in white"
-      svgProps={{ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 128 128" }}
+      svgProps={{ viewBox: "0 0 128 128", xmlns: "http://www.w3.org/2000/svg" }}
     >
       <circle cx="64" cy="64" r="64" />
       <path

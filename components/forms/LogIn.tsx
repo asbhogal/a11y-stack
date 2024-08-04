@@ -1,4 +1,7 @@
 import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner";
 import {
   Form,
   FormControl,
@@ -8,11 +11,8 @@ import {
   FormLabel,
   FormMessage,
 } from "../ui/form";
-import { useForm } from "react-hook-form";
 import { Input } from "../ui/input";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "../ui/button";
-import { toast } from "sonner";
 
 export default function LogIn() {
   const logInFormSchema = z.object({
@@ -21,14 +21,15 @@ export default function LogIn() {
   });
 
   const form = useForm<z.infer<typeof logInFormSchema>>({
-    resolver: zodResolver(logInFormSchema),
     defaultValues: {
       email: "",
       password: "",
     },
+    resolver: zodResolver(logInFormSchema),
   });
 
   function onSubmit(data: z.infer<typeof logInFormSchema>) {
+    // eslint-disable-next-line no-console
     console.log(data);
     toast("Log in successful");
   }

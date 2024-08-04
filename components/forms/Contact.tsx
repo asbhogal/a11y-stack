@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { toast } from "sonner";
 import {
   Form,
   FormControl,
@@ -13,33 +14,33 @@ import {
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-import { toast } from "sonner";
 
 export default function Contact() {
   const contactFormSchema = z.object({
+    email: z.string().email(),
     firstName: z
       .string()
       .min(3, { message: "Must be 3 or more characters long" }),
     lastName: z
       .string()
       .min(3, { message: "Must be 3 or more characters long" }),
-    email: z.string().email(),
     message: z
       .string()
       .min(3, { message: "Must be 3 or more characters long" }),
   });
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
-    resolver: zodResolver(contactFormSchema),
     defaultValues: {
+      email: "",
       firstName: "",
       lastName: "",
-      email: "",
       message: "",
     },
+    resolver: zodResolver(contactFormSchema),
   });
 
   function onSubmit(data: z.infer<typeof contactFormSchema>) {
+    // eslint-disable-next-line no-console
     console.log(data);
     toast("Message sent. We will get back to you shortly");
   }
