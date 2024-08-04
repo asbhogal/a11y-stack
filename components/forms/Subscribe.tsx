@@ -22,13 +22,14 @@ export default function Subscribe() {
   });
 
   const form = useForm<z.infer<typeof subscribeFormSchema>>({
-    resolver: zodResolver(subscribeFormSchema),
     defaultValues: {
       email: "",
     },
+    resolver: zodResolver(subscribeFormSchema),
   });
 
   function onSubmit(data: z.infer<typeof subscribeFormSchema>) {
+    // eslint-disable-next-line no-console
     console.log(data);
     toast("Email sent. Please check your inbox to confirm your subscription.");
   }

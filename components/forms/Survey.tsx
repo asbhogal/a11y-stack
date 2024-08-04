@@ -1,6 +1,9 @@
+/* eslint-disable prettier/prettier */
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { toast } from "sonner";
 import {
   Form,
   FormControl,
@@ -12,7 +15,6 @@ import {
 } from "../ui/form";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Button } from "../ui/button";
-import { toast } from "sonner";
 import {
   Select,
   SelectContent,
@@ -41,20 +43,21 @@ const source = ["website", "newsletter", "job board", "other"];
 export default function Survey() {
   const surveyFormSchema = z.object({
     comments: z.string(),
-    source: z.string(),
     rating: z.enum(rating, { required_error: "Please select a rating" }),
+    source: z.string(),
   });
 
   const form = useForm<z.infer<typeof surveyFormSchema>>({
-    resolver: zodResolver(surveyFormSchema),
     defaultValues: {
       comments: "",
-      source: "",
       rating: undefined,
+      source: "",
     },
+    resolver: zodResolver(surveyFormSchema),
   });
 
   function onSubmit(data: z.infer<typeof surveyFormSchema>) {
+    // eslint-disable-next-line no-console
     console.log(data);
     toast("Thank you for your feedback!");
   }
@@ -81,10 +84,10 @@ export default function Survey() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  {source.map((source) => (
+                  {source.map((sourceItem) => (
                     <SelectItem
-                      key={source}
-                      value={source}
+                      key={sourceItem}
+                      value={sourceItem}
                       className="capitalize"
                     >
                       {source}
@@ -113,14 +116,17 @@ export default function Survey() {
                   defaultValue={field.value}
                   className="flex justify-between gap-4"
                 >
-                  {rating.map((rating) => (
+                  {rating.map((ratingItem) => (
                     <FormItem
-                      key={rating}
+                      key={ratingItem}
                       className="flex flex-col items-center"
                     >
                       <FormLabel className="capitalize">{rating}</FormLabel>
                       <FormControl>
-                        <RadioGroupItem aria-label={rating} value={rating} />
+                        <RadioGroupItem
+                          aria-label={ratingItem}
+                          value={ratingItem}
+                        />
                       </FormControl>
                       <FormDescription className="sr-only">
                         {rating}

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "a11y stack | Modular, Extensive, Semantic",
   description:
     "Accessibility-focused, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky.",
+  title: "a11y stack | Modular, Extensive, Semantic",
 };
 
 export default function Page() {
