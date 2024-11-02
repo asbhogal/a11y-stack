@@ -172,7 +172,7 @@ export default function Page() {
           <h3>
             the <span className="accent">stack</span>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 justify-items-center gap-4">
             <Feature
               title="Next.js"
               feature="A full stack framework built upon React, Next.js offers dynamic routing, API routes, extensibility with database platforms and SEO capabilities under-the-hood"
@@ -199,31 +199,31 @@ export default function Page() {
             </Feature>
             <Feature
               title="Shadcn"
-              feature="An extensive library of ready-to-use components built upon Radix primitives, Shadcn addresses many accessibility challenges by creating _______ which play nice with Tailwind"
+              feature="An extensive library of ready-to-use components built upon Radix primitives, Shadcn addresses many accessibility challenges which also plays nice with Tailwind"
             >
               <Shadcn />
             </Feature>
             <Feature
               title="React Hook Form"
-              feature="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              feature="A lightweight, performant library for managing form state and validation in React applications, utilizing hooks to simplify form handling with minimal re-renders and an intuitive API"
             >
               <ReactHookForm />
             </Feature>
             <Feature
               title="Zod"
-              feature="TypeScript-first schema declaration and validation library which infers types to reduce duplicate type declarations and ensure data integrity ____ shape of the data."
+              feature="A TypeScript-first schema declaration and validation library that enables developers to define, validate, and infer types for complex data structures at runtime, ensuring data integrity and type safety in applications."
             >
               <Zod />
             </Feature>
             <Feature
               title="Playwright"
-              feature="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              feature="A powerful open-source automation framework for web testing and browser automation, including axe-core a11y integration and visual regression testing. "
             >
               <Playwright />
             </Feature>
             <Feature
               title="Prettier"
-              feature="Opinionated code formatter which ensures code follows a consistent style."
+              feature="A popular, opinionated code formatter that automatically formats code to ensure consistent style across projects, supporting multiple languages and integrating seamlessly with various development environments and workflows"
             >
               <Prettier />
             </Feature>
@@ -235,7 +235,7 @@ export default function Page() {
             </Feature>
             <Feature
               title="Husky"
-              feature="Enables the ability to run linting, testing and formatting of code upon committing to source control."
+              feature="Simplifies the integration of Git hooks into development workflows, allowing task automation and enforcing code quality standards prior to commits and pushes."
             >
               <Husky />
             </Feature>
