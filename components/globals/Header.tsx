@@ -1,71 +1,9 @@
 import Link from "next/link";
 import Icon from "../Icon";
 
-type LinksType = {
-  id: number;
-  title: string;
-  href: string;
-  label: string;
-};
-
-export const links: LinksType[] = [
-  {
-    href: "/",
-    id: 1,
-    label: "home",
-    title: "Home",
-  },
-  {
-    href: "/introduction",
-    id: 2,
-    label: "introduction",
-    title: "Introduction",
-  },
-  {
-    href: "/installation",
-    id: 3,
-    label: "installation",
-    title: "Installation",
-  },
-  {
-    href: "/components",
-    id: 4,
-    label: "components",
-    title: "Components",
-  },
-  {
-    href: "/support",
-    id: 5,
-    label: "support",
-    title: "Support",
-  },
-  {
-    href: "/contribute",
-    id: 6,
-    label: "contribute",
-    title: "Contribute",
-  },
-];
-
 export default function Header() {
   return (
     <header className="flex p-8 justify-between">
-      <nav>
-        <ul className="flex flex-col md:flex-row gap-4 list-none">
-          {links.map((link) => (
-            <li key={link.id} className="">
-              <Link
-                type="tertiary"
-                title={link.title}
-                href={link.href}
-                className="font-mono uppercase"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
       <Link
         title="GitHub Repo"
         type="tertiary"

@@ -13,7 +13,6 @@ import Playwright from "@/components/misc/icons/Playwright";
 import Prettier from "@/components/misc/icons/Prettier";
 import ESLint from "@/components/misc/icons/ESLint";
 import Husky from "@/components/misc/icons/Husky";
-import Pagination from "@/components/globals/Pagination";
 import Accent from "@/components/globals/Accent";
 import Link from "next/link";
 import React from "react";
@@ -242,7 +241,6 @@ export default function Page() {
             </Feature>
           </div>
         </div>
-        <Pagination />
       </div>
     </React.Fragment>
   );
