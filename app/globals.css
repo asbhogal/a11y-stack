@@ -39,6 +39,11 @@
     @apply bg-accent;
     @apply text-vampireBlack;
     @apply border border-vampireBlack;
+    @apply transition;
+    @apply p-2;
+    @apply w-fit;
+    @apply rounded-md;
+    @apply uppercase;
 
     &:hover {
       @apply bg-vampireBlack;
@@ -69,14 +74,8 @@
     }
   }
 
-  ol {
-    @apply text-3xl;
+  ol,
+  li {
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
   }
 }
-
-/* .marquee {
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  overflow-x: hidden;
-} */

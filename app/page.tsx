@@ -3,7 +3,7 @@ import Feature from "@/components/misc/Feature";
 import Nextjs from "@/components/misc/icons/Nextjs";
 import ReactHookForm from "@/components/misc/icons/ReactHookForm";
 import Shadcn from "@/components/misc/icons/Shadcn";
-import Stacks from "@/components/misc/icons/Stacks";
+import Stacks from "@/components/misc/Stacks";
 import Storybook from "@/components/misc/icons/Storybook";
 import Tailwind from "@/components/misc/icons/Tailwind";
 import Zod from "@/components/misc/icons/Zod";
@@ -43,10 +43,7 @@ export default function Page() {
               code="npx create-a11y-stack@latest"
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-fit">
-              <Link title="Get started" href="installation">
-                Get started
-              </Link>
-              <Link title="Support" href="support">
+              <Link className="primary-link" title="Support" href="support">
                 Support
               </Link>
             </div>
@@ -68,7 +65,7 @@ export default function Page() {
           <span className="accent">accessibility</span> at the{" "}
           <span className="accent">forefront of development</span>
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
           <Feature
             title="sound semantic practices"
             feature="Enforces proper, accessible HTML across components using correct semantics"
@@ -78,7 +75,7 @@ export default function Page() {
             feature="TypeScript, Zod schema validation and code formatting all work together"
           />
           <Feature
-            title="extensibility"
+            title="extensible"
             feature="Turn this into a full stack framework using Prisma, Drizzle, Payload, Next Auth etc."
           />
         </div>
@@ -91,17 +88,24 @@ export default function Page() {
         </h3>
         <ol className="marker:text-accent list-decimal ml-8">
           <li>
-            time spent scaffolding an app with several dependencies and scripts
-            to run before actually building, wasting valuable development time
+            <p>
+              time spent scaffolding an app with several dependencies and
+              scripts to run before actually building, wasting valuable
+              development time
+            </p>
           </li>
           <li>
-            challenges implementing modern, a11y-focused components which pass
-            Lighthouse, WCAG and other a11y testing audits
+            <p>
+              challenges implementing modern, a11y-focused components which pass
+              Lighthouse, WCAG and other a11y testing audits
+            </p>
           </li>
           <li>
-            cross-dependency issues, including debugging TypeScript and
-            non-TypeScript features and numerous configuration files between
-            different libraries
+            <p>
+              cross-dependency issues, including debugging TypeScript and
+              non-TypeScript features and numerous configuration files between
+              different libraries
+            </p>
           </li>
         </ol>
 
@@ -110,61 +114,14 @@ export default function Page() {
           framework and spin up a dev server, ready for development
         </p>
 
-        <Link type="primary" title="Get started" href="installation">
+        <Link
+          type="primary"
+          className="primary-link"
+          title="Get started"
+          href="installation"
+        >
           Get started
         </Link>
-      </div>
-
-      <div className="flex flex-col gap-6 min-h-dvh">
-        <h3>
-          out of the <Accent>box</Accent>{" "}
-        </h3>
-        <ul className="list-disc">
-          <li>
-            Next.js 14 <Accent>(app router)</Accent>
-          </li>
-          <li>
-            Example Next.js <Accent>API routes</Accent>
-          </li>
-          <li>
-            <Accent>Stories</Accent> for components
-          </li>
-          <li>
-            a11y and interaction testing of pages and components within{" "}
-            <Accent>Storybook UI</Accent> & <Accent>Playwright UI</Accent>
-          </li>
-          <li>
-            <Accent>Shadcn/ui components</Accent> (built on Radix primitives)
-          </li>
-          <li>
-            A selection of <Accent>WCAG-compliant forms</Accent> using
-            React-Hook-Form and Zod (Billing, Contact, Login, Subscribe, Survey)
-          </li>
-          <li>
-            <Accent>Custom WCAG-compliant components</Accent> (incl. links and
-            icons)
-          </li>
-          <li>
-            <Accent>Tailwind CSS</Accent>, configured with Storybook for styling
-            in isolation
-          </li>
-          <li>
-            <Accent>Linting, formatting and testing</Accent> using ES Lint,
-            lint-staged and Prettier
-          </li>
-          <li>
-            Husky configured to{" "}
-            <Accent>
-              run linting and e2e and a11y testing prior to commit
-            </Accent>
-          </li>
-          <li>
-            <Accent>Locally hosted</Accent> fonts
-          </li>
-          <li>
-            Built <Accent>ground-up</Accent> using TypeScript
-          </li>
-        </ul>
       </div>
 
       <div className="min-h-dvh">
