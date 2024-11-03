@@ -31,6 +31,9 @@
     "react-hooks",
     "sort-keys-fix"
   ],
-  "ignorePatterns": ["ui", ".storybook", "tailwind.config.ts"],
-  "root": true
+  "ignorePatterns": [
+    "ui",
+    ".storybook",
+    "tailwind.config.ts"
+  ]
 }
