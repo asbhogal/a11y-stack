@@ -1,13 +1,15 @@
 import Link from "next/link";
 import Icon from "../Icon";
+import SiteLogo from "./SiteLogo";
 
 export default function Header() {
   return (
-    <header className="flex p-8 justify-between">
+    <header className="flex items-center p-4 justify-between">
+      <SiteLogo />
       <Link
         title="GitHub Repo"
         type="tertiary"
-        href="https://github.com/asbhogal/a11y-stack"
+        href="https://github.com/a11y-stack/a11y-stack"
       >
         <span className="sr-only">GitHub repo</span>
         <Icon
