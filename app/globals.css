@@ -85,3 +85,21 @@
     font-size: clamp(1rem, 0.9375rem + 0.3125vw, 1.3125rem);
   }
 }
+
+.carbonbadge {
+  display: flex;
+  & > div > a:first-child {
+    color: white;
+  }
+  & > div > a {
+    border-color: transparent;
+    border-radius: 0;
+    background-color: black;
+    text-decoration: none;
+    color: #b7b7a4;
+    font-family: "General Sans", sans-serif;
+  }
+  & > div > a:nth-child(2) {
+    text-transform: uppercase;
+  }
+}

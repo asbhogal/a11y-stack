@@ -1,8 +1,8 @@
 "use client";
 
+import { toast } from "sonner";
 import { Button } from "../ui/button";
 import Clipboard from "./icons/Clipboard";
-import { toast } from "sonner";
 
 interface CodeProps {
   className?: string;
@@ -19,7 +19,7 @@ export default function Code({ code, copy, className }: CodeProps) {
   return (
     <figure
       className={[
-        "flex items-center gap-4 bg-chineseBlack text-antiFlashWhite px-4 rounded-md w-fit",
+        "flex items-center gap-4 bg-chineseBlack text-antiFlashWhite px-4 w-fit",
         className,
       ].join(" ")}
     >
@@ -30,7 +30,7 @@ export default function Code({ code, copy, className }: CodeProps) {
         aria-labelledby="button-label"
         variant="secondary"
         className="p-0"
-        onClick={handleCopyToClipboard}
+        onClick={() => handleCopyToClipboard}
       >
         {copy && <Clipboard />}
         <span id="button-label" className="sr-only">

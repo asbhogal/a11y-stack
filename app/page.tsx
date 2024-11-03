@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <React.Fragment>
-      <div className="flex flex-row min-h-dvh bg-chineseBlack p-4 mb-8">
-        <div className="flex flex-col gap-8 max-w-6xl">
+      <div className="flex flex-row min-h-dvh bg-chineseBlack m-4 pb-8">
+        <div className="flex flex-col gap-8 max-w-6xl p-4">
           <h1 className="sr-only">a11y-stack | home page</h1>
           <div className="flex flex-col gap-6">
             <h2>
@@ -46,17 +46,16 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 min-h-dvh bg-chineseBlack mb-8">
+      <div className="flex flex-row min-h-dvh bg-chineseBlack m-4 pb-8">
         <div className="max-w-[80rem] p-4">
-          <h3>
+          <h3 className="pb-4">
             {" "}
             a11y-stack is an{" "}
             <span className="accent">opinionated, unified</span> and{" "}
             <Accent>robust</Accent> framework which enforces{" "}
             <Accent>type-checking</Accent>
             {", "}
-            <Accent>sound coding practices</Accent>
-            {", "} <Accent>extensibility</Accent> and{" "}
+            <Accent>sound coding practices</Accent> and{" "}
             <Accent>accessibility</Accent> at the{" "}
             <Accent>forefront of development</Accent>
           </h3>
@@ -74,12 +73,8 @@ export default function Page() {
               feature="Turn this into a full stack framework using Prisma, Drizzle, Payload, Next Auth etc."
             />
           </div>
-        </div>
-      </div>
 
-      <div className="flex flex-col gap-6 min-h-dvh bg-chineseBlack mb-8">
-        <div className="max-w-[80rem] p-4">
-          <h3>
+          <h3 className="pb-4">
             {" "}
             created to solve <Accent>three main developer pain points</Accent>
           </h3>
@@ -108,7 +103,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="min-h-dvh p-2 bg-chineseBlack mb-8">
+      <div className="flex flex-row min-h-dvh bg-chineseBlack m-4 pb-8">
         <div className="p-4">
           <div className="flex flex-col gap-4">
             <h3>
