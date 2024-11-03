@@ -9,7 +9,7 @@ export default function Header() {
       <Link
         title="GitHub Repo"
         type="tertiary"
-        href="https://github.com/a11y-stack/a11y-stack"
+        href="https://github.com/asbhogal/a11y-stack"
       >
         <span className="sr-only">GitHub repo</span>
         <Icon
