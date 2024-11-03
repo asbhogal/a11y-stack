@@ -26,9 +26,11 @@ const config = {
     },
     colors: {
       black: "#000000",
+      vampireBlack: "#0b0b0b",
       chineseBlack: "#101010",
       gray: "#808080",
       turkishRed: "#C8102E",
+      accent: "#b7b7a4",
       antiFlashWhite: "#f1f1f1",
       lotion: "#fafafa",
     },
@@ -47,6 +49,10 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+    },
+    fontFamily: {
+      sans: ["var(--font-generalSans)"],
+      serif: ["var(--font-boska)"],
     },
   },
   plugins: [require("tailwindcss-animate")],
