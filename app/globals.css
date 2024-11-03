@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  h1,
+  h2,
+  h3 {
+    @apply font-serif;
+  }
+
   h1 {
     font-size: clamp(2.625rem, 2.1429rem + 2.4107vw, 6rem);
   }
@@ -23,6 +29,7 @@
 
   .accent {
     @apply text-accent;
+    @apply italic;
   }
 }
 
@@ -74,8 +81,7 @@
     }
   }
 
-  ol,
-  li {
-    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+  p {
+    font-size: clamp(1rem, 0.9375rem + 0.3125vw, 1.3125rem);
   }
 }

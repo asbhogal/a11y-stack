@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <React.Fragment>
-      <div className="flex flex-row min-h-dvh">
+      <div className="flex flex-row min-h-dvh bg-chineseBlack p-4 mb-8">
         <div className="flex flex-col gap-8 max-w-6xl">
           <h1 className="sr-only">a11y-stack | home page</h1>
           <div className="flex flex-col gap-6">
@@ -42,46 +42,43 @@ export default function Page() {
               copy
               code="npx create-a11y-stack@latest"
             />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-fit">
-              <Link className="primary-link" title="Support" href="support">
-                Support
-              </Link>
-            </div>
             <Stacks />
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 min-h-dvh">
-        <h3>
-          {" "}
-          a11y-stack is an <span className="accent">
-            opinionated, unified
-          </span>{" "}
-          and <span className="accent">robust</span> framework which enforces{" "}
-          <span className="accent">type-checking</span>,{" "}
-          <span className="accent">sound coding practices</span> and{" "}
-          <span className="accent">extensibility </span>whilst placing{" "}
-          <span className="accent">accessibility</span> at the{" "}
-          <span className="accent">forefront of development</span>
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
-          <Feature
-            title="sound semantic practices"
-            feature="Enforces proper, accessible HTML across components using correct semantics"
-          />
-          <Feature
-            title="enforces type safety"
-            feature="TypeScript, Zod schema validation and code formatting all work together"
-          />
-          <Feature
-            title="extensible"
-            feature="Turn this into a full stack framework using Prisma, Drizzle, Payload, Next Auth etc."
-          />
+      <div className="flex flex-col gap-4 min-h-dvh bg-chineseBlack mb-8">
+        <div className="max-w-[80rem] p-4">
+          <h3>
+            {" "}
+            a11y-stack is an{" "}
+            <span className="accent">opinionated, unified</span> and{" "}
+            <Accent>robust</Accent> framework which enforces{" "}
+            <Accent>type-checking</Accent>
+            {", "}
+            <Accent>sound coding practices</Accent>
+            {", "} <Accent>extensibility</Accent> and{" "}
+            <Accent>accessibility</Accent> at the{" "}
+            <Accent>forefront of development</Accent>
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 mb-8">
+            <Feature
+              title="sound semantic practices"
+              feature="Enforces proper, accessible HTML across components using correct semantics"
+            />
+            <Feature
+              title="enforces type safety"
+              feature="TypeScript, Zod schema validation and code formatting all work together"
+            />
+            <Feature
+              title="extensible"
+              feature="Turn this into a full stack framework using Prisma, Drizzle, Payload, Next Auth etc."
+            />
+          </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 min-h-dvh">
+      <div className="flex flex-col gap-6 min-h-dvh bg-chineseBlack mb-8">
         <h3>
           {" "}
           created to solve <Accent>three main developer pain points</Accent>
@@ -124,10 +121,10 @@ export default function Page() {
         </Link>
       </div>
 
-      <div className="min-h-dvh">
+      <div className="min-h-dvh p-2 bg-chineseBlack mb-8">
         <div className="flex flex-col gap-4">
           <h3>
-            the <span className="accent">stack</span>
+            out of the <Accent>box</Accent>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-4 justify-items-center gap-4">
             <Feature
