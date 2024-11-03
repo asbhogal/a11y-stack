@@ -20,7 +20,7 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ["**/ui", "**/.storybook", "**/tailwind.config.ts"],
+    ignores: ["**/ui", "**/.storybook", "**/tailwind.config.ts", "bin"],
   },
   ...compat.extends(
     "@innovixx/eslint-config/configs/base",
