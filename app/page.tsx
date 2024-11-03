@@ -39,7 +39,7 @@ export default function Page() {
             <Code
               className="border border-accent"
               copy
-              code="npx create-a11y-stack@latest"
+              code="npx create-a11y-stack-app@latest"
             />
             <Stacks />
           </div>
