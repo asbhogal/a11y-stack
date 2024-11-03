@@ -19,18 +19,20 @@ export default function Code({ code, copy, className }: CodeProps) {
   return (
     <figure
       className={[
-        "flex items-center gap-4 bg-chineseBlack text-antiFlashWhite px-4 w-fit",
+        "flex items-center gap-4 bg-chineseBlack text-antiFlashWhite px-2 md:px-4 w-fit",
         className,
       ].join(" ")}
     >
       <pre role="img" aria-label={code}>
-        <code>{code}</code>
+        <code className="text-xs md:text-lg">{code}</code>
       </pre>
       <Button
+        type="button"
         aria-labelledby="button-label"
         variant="secondary"
         className="p-0"
-        onClick={() => handleCopyToClipboard}
+        /* eslint-disable-next-line react/jsx-no-bind */
+        onClick={handleCopyToClipboard}
       >
         {copy && <Clipboard />}
         <span id="button-label" className="sr-only">

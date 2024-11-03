@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col gap-4 w-full p-8 bg-chineseBlack">
       <p className="text-sm flex flex-col">
-        <span className="text-sm accent font-serif">note</span>
+        <span className="text-lg accent font-serif">note</span>
         This app is designed to identify and help resolve a wide range of a11y
         issues during development. It is not a complete solution to
         accessibility-compliance. Proper testing also involves real-life user
