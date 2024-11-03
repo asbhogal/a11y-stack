@@ -1,4 +1,10 @@
-# a11y stack
+
+<div align="center">
+  
+![Project-Cover](https://github.com/a11y-stack/a11y-stack/blob/main/public/images/a11y-stack-header.png)
+<h1>a11y stack</h1>
+
+</div>
 
 An accessibility-focused, typesafe Next.js frontend stack, built using TypeScript, Next.js (App router), Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod and Husky.
 
