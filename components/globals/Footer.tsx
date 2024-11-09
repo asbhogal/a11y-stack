@@ -26,7 +26,7 @@ export default function Footer() {
             </Link>
           </p>
         </div>
-        <WebsiteCarbonBadge dark />
+        <WebsiteCarbonBadge url="amansinghbhogal.com" dark />
       </div>
     </footer>
   );
