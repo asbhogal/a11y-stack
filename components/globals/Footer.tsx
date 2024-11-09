@@ -21,12 +21,12 @@ export default function Footer() {
           <p className="text-sm">© a11y-stack | 2024</p>
           <p className="text-sm">
             Designed and Developed by{' '}
-            <Link className="text-accent" href="www.amansinghbhogal.com">
+            <Link className="text-accent" href="a11y-stack.com">
               Aman Singh Bhogal
             </Link>
           </p>
         </div>
-        <WebsiteCarbonBadge url="amansinghbhogal.com" dark />
+        <WebsiteCarbonBadge url="www.a11y-stack.com" dark />
       </div>
     </footer>
   );
