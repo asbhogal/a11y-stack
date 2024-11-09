@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs/promises';
-import path from 'path';
-import { exec } from 'child_process';
+const fs = require('fs').promises;
+const path = require('path');
+const { exec } = require('child_process');
 
 const readline = require('readline').createInterface({
   input: process.stdin,
@@ -43,7 +43,13 @@ async function createApp(appName) {
   const appDir = path.join(process.cwd(), appName);
   await fs.mkdir(appDir, { recursive: true });
 
-  const sourceDir = path.dirname(__dirname); // Get the parent directory of this script
+  const scriptDir = path.dirname(__filename);
+  const sourceDir = path.resolve(scriptDir, '.');
+
+  console.log(`Source directory: ${sourceDir}`);
+
+  console.log('Contents of source directory:');
+  console.log(await fs.readdir(sourceDir));
 
   const copyPromises = [
     copyDirectory(path.join(sourceDir, '.husky'), path.join(appDir, '.husky')),
@@ -68,7 +74,6 @@ async function createApp(appName) {
     copyDirectory(path.join(sourceDir, 'tests'), path.join(appDir, 'tests')),
   ];
 
-  // Copy root files
   await copyRootFiles(sourceDir, appDir);
 
   await Promise.all(copyPromises);
