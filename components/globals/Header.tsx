@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Icon from "../Icon";
-import SiteLogo from "./SiteLogo";
+import Link from 'next/link';
+import Icon from '../Icon';
+import SiteLogo from './SiteLogo';
 
 export default function Header() {
   return (
@@ -17,8 +17,8 @@ export default function Header() {
           description="A silhouette of a cat"
           className="h-6 w-6"
           svgProps={{
-            viewBox: "0 0 98 96",
-            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: '0 0 98 96',
+            xmlns: 'http://www.w3.org/2000/svg',
           }}
         >
           <path

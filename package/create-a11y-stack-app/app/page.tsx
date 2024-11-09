@@ -1,10 +1,10 @@
-import { Metadata } from "next";
-import React from "react";
+import { Metadata } from 'next';
+import React from 'react';
 
 export const metadata: Metadata = {
   description:
-    "Accessibility-focused, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky. ",
-  title: "a11y-stack | Modular, Extensible, Semantic",
+    'Accessibility-focused, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky. ',
+  title: 'a11y-stack | Modular, Extensible, Semantic',
 };
 
 export default function Page() {

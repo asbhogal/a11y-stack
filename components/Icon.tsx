@@ -17,11 +17,11 @@ export default function Icon({
 }: IconProps) {
   return (
     <svg
-      aria-hidden={inButton ? "true" : undefined}
-      focusable={inButton ? "false" : undefined}
+      aria-hidden={inButton ? 'true' : undefined}
+      focusable={inButton ? 'false' : undefined}
       role="img"
       aria-describedby="icon icon-description"
-      className={[className, "icon"].join(" ")}
+      className={[className, 'icon'].join(' ')}
       {...svgProps}
     >
       <title id="my-title">{title}</title>

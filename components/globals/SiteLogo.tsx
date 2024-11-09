@@ -4,7 +4,7 @@ interface SiteLogoProps {
 }
 
 export default function SiteLogo({
-  fill = "transparent",
+  fill = 'transparent',
   width = 50,
 }: SiteLogoProps) {
   return (
@@ -21,7 +21,7 @@ export default function SiteLogo({
     >
       <title id="logo-title">a11y stack logo</title>
       <desc id="logo-description">
-        The letters &apos;a&apos; and &apos;s&apos; in uppercase{" "}
+        The letters &apos;a&apos; and &apos;s&apos; in uppercase{' '}
       </desc>
       <rect width="250" height="250" fill={fill} />
       <path

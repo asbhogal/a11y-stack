@@ -1,25 +1,25 @@
-import Code from "@/components/misc/Code";
-import Feature from "@/components/misc/Feature";
-import Nextjs from "@/components/misc/icons/Nextjs";
-import ReactHookForm from "@/components/misc/icons/ReactHookForm";
-import Shadcn from "@/components/misc/icons/Shadcn";
-import Stacks from "@/components/misc/Stacks";
-import Storybook from "@/components/misc/icons/Storybook";
-import Tailwind from "@/components/misc/icons/Tailwind";
-import Zod from "@/components/misc/icons/Zod";
-import TypeScript from "@/components/misc/icons/TypeScript";
-import { Metadata } from "next";
-import Playwright from "@/components/misc/icons/Playwright";
-import Prettier from "@/components/misc/icons/Prettier";
-import ESLint from "@/components/misc/icons/ESLint";
-import Husky from "@/components/misc/icons/Husky";
-import Accent from "@/components/globals/Accent";
-import React from "react";
+import Code from '@/components/misc/Code';
+import Feature from '@/components/misc/Feature';
+import Nextjs from '@/components/misc/icons/Nextjs';
+import ReactHookForm from '@/components/misc/icons/ReactHookForm';
+import Shadcn from '@/components/misc/icons/Shadcn';
+import Stacks from '@/components/misc/Stacks';
+import Storybook from '@/components/misc/icons/Storybook';
+import Tailwind from '@/components/misc/icons/Tailwind';
+import Zod from '@/components/misc/icons/Zod';
+import TypeScript from '@/components/misc/icons/TypeScript';
+import { Metadata } from 'next';
+import Playwright from '@/components/misc/icons/Playwright';
+import Prettier from '@/components/misc/icons/Prettier';
+import ESLint from '@/components/misc/icons/ESLint';
+import Husky from '@/components/misc/icons/Husky';
+import Accent from '@/components/globals/Accent';
+import React from 'react';
 
 export const metadata: Metadata = {
   description:
-    "Accessibility-focused, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky.",
-  title: "a11y stack | Modular, Extensive, Semantic",
+    'Accessibility-focused, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky.',
+  title: 'a11y stack | Modular, Extensive, Semantic',
 };
 
 export default function Page() {
@@ -30,8 +30,8 @@ export default function Page() {
           <h1 className="sr-only">a11y-stack | home page</h1>
           <div className="flex flex-col gap-6">
             <h2>
-              An <span className="accent">accessibility-focused,</span>{" "}
-              type-safe Next.js frontend framework stack{" "}
+              An <span className="accent">accessibility-focused,</span>{' '}
+              type-safe Next.js frontend framework stack{' '}
             </h2>
             <p>
               Modular <Accent>|</Accent> Semantic <Accent>|</Accent> Extensible
@@ -49,14 +49,14 @@ export default function Page() {
       <div className="flex flex-row min-h-dvh bg-chineseBlack m-4 pb-8">
         <div className="max-w-[80rem] p-4">
           <h3 className="pb-4">
-            {" "}
-            a11y-stack is an{" "}
-            <span className="accent">opinionated, unified</span> and{" "}
-            <Accent>robust</Accent> framework which enforces{" "}
+            {' '}
+            a11y-stack is an{' '}
+            <span className="accent">opinionated, unified</span> and{' '}
+            <Accent>robust</Accent> framework which enforces{' '}
             <Accent>type-checking</Accent>
-            {", "}
-            <Accent>sound coding practices</Accent> and{" "}
-            <Accent>accessibility</Accent> at the{" "}
+            {', '}
+            <Accent>sound coding practices</Accent> and{' '}
+            <Accent>accessibility</Accent> at the{' '}
             <Accent>forefront of development</Accent>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 mb-8">
@@ -75,7 +75,7 @@ export default function Page() {
           </div>
 
           <h3 className="pb-4">
-            {" "}
+            {' '}
             created to solve <Accent>three main developer pain points</Accent>
           </h3>
           <ol className="flex flex-col md:flex-row gap-4 marker:text-accent list-decimal ml-8">

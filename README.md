@@ -1,4 +1,3 @@
-
 <div align="center">
   
 ![Project-Cover](https://github.com/a11y-stack/a11y-stack/blob/main/public/images/a11y-stack-header.png)

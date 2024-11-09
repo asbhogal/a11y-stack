@@ -1,11 +1,11 @@
-import Icon from "@/components/Icon";
+import Icon from '@/components/Icon';
 
 export default function Shadcn() {
   return (
     <Icon
       title="shadcn/ui logo"
       description="Two adjacent white lines at an angle, one shorter than the other, against a black backdrop"
-      svgProps={{ viewBox: "0 0 256 256", xmlns: "http://www.w3.org/2000/svg" }}
+      svgProps={{ viewBox: '0 0 256 256', xmlns: 'http://www.w3.org/2000/svg' }}
     >
       <rect width="256" height="256" fill="none" />
       <line

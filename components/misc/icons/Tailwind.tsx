@@ -1,4 +1,4 @@
-import Icon from "@/components/Icon";
+import Icon from '@/components/Icon';
 
 export default function Tailwind() {
   return (
@@ -6,9 +6,9 @@ export default function Tailwind() {
       title="Tailwind logo"
       description="Two blue wavy lines stacks on top of one another"
       svgProps={{
-        fill: "none",
-        viewBox: "0 0 54 33",
-        xmlns: "http://www.w3.org/2000/svg",
+        fill: 'none',
+        viewBox: '0 0 54 33',
+        xmlns: 'http://www.w3.org/2000/svg',
       }}
     >
       <g clipPath="url(#prefix__clip0)">

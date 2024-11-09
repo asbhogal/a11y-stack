@@ -1,31 +1,30 @@
-import Header from "@/components/globals/Header";
-import "./globals.css";
-import "@splidejs/react-splide/css";
-import Footer from "@/components/globals/Footer";
-import Container from "@/components/globals/Container";
-import { Toaster } from "@/components/ui/sonner";
+import Header from '@/components/globals/Header';
+import './globals.css';
+import Footer from '@/components/globals/Footer';
+import Container from '@/components/globals/Container';
+import { Toaster } from '@/components/ui/sonner';
 
-import localFont from "next/font/local";
+import localFont from 'next/font/local';
 
 const boska = localFont({
-  display: "swap",
+  display: 'swap',
   src: [
-    { path: "../public/fonts/Boska-Variable.woff2", style: "normal" },
-    { path: "../public/fonts/Boska-VariableItalic.woff2", style: "italic" },
+    { path: '../public/fonts/Boska-Variable.woff2', style: 'normal' },
+    { path: '../public/fonts/Boska-VariableItalic.woff2', style: 'italic' },
   ],
-  variable: "--font-boska",
+  variable: '--font-boska',
 });
 
 const generalSans = localFont({
-  display: "swap",
+  display: 'swap',
   src: [
-    { path: "../public/fonts/GeneralSans-Variable.woff2", style: "normal" },
+    { path: '../public/fonts/GeneralSans-Variable.woff2', style: 'normal' },
     {
-      path: "../public/fonts/GeneralSans-VariableItalic.woff2",
-      style: "italic",
+      path: '../public/fonts/GeneralSans-VariableItalic.woff2',
+      style: 'italic',
     },
   ],
-  variable: "--font-generalSans",
+  variable: '--font-generalSans',
 });
 
 export default function RootLayout({

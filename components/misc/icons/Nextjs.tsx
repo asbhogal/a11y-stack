@@ -1,11 +1,11 @@
-import Icon from "@/components/Icon";
+import Icon from '@/components/Icon';
 
 export default function Nextjs() {
   return (
     <Icon
       title="Next.js logo"
       description="The Next.js logo in white"
-      svgProps={{ viewBox: "0 0 128 128", xmlns: "http://www.w3.org/2000/svg" }}
+      svgProps={{ viewBox: '0 0 128 128', xmlns: 'http://www.w3.org/2000/svg' }}
     >
       <circle cx="64" cy="64" r="64" />
       <path

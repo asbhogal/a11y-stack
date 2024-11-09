@@ -1,5 +1,5 @@
-import { test, expect } from "@playwright/test";
+import { test } from '@playwright/test';
 
-test("should navigate to home page on first render", async ({ page }) => {
-  await page.goto("/");
+test('should navigate to home page on first render', async ({ page }) => {
+  await page.goto('/');
 });

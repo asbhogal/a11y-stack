@@ -28,7 +28,8 @@
     "test-results",
     "tests",
     ".husky",
-    ".storybook"
+    ".storybook",
+    "*.*"
   ],
   "repository": {
     "type": "git",

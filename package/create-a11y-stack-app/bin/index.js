@@ -1,153 +1,115 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-const readline = require("readline").createInterface({
+import fs from 'fs/promises';
+import path from 'path';
+import { exec } from 'child_process';
+
+const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-function copyDirectory(source, destination) {
-  const dirPath = path.resolve(__dirname, "..", source);
-  const destPath = path.resolve(process.cwd(), destination);
+async function copyDirectory(source, destination) {
+  const files = await fs.readdir(source, { withFileTypes: true });
 
-  return new Promise((resolve, reject) => {
-    fs.mkdir(destPath, { recursive: true }, (err) => {
-      if (err) {
-        reject(
-          new Error(
-            `Failed to create directory: ${destPath}. Error: ${err.message}`,
-          ),
-        );
-        return;
-      }
+  for (const file of files) {
+    const srcPath = path.join(source, file.name);
+    const destPath = path.join(destination, file.name);
 
-      fs.readdir(dirPath, (err, files) => {
-        if (err) {
-          reject(
-            new Error(
-              `Failed to read directory: ${dirPath}. Error: ${err.message}`,
-            ),
-          );
-          return;
-        }
+    if (file.isDirectory()) {
+      await fs.mkdir(destPath, { recursive: true });
+      await copyDirectory(srcPath, destPath);
+    } else {
+      await fs.copyFile(srcPath, destPath);
+    }
+  }
+}
 
-        if (!files || files.length === 0) {
-          console.log(`No files found in ${dirPath}`);
-          resolve(); // Resolve even if no files were copied
-          return;
-        }
+async function copyRootFiles(source, destination) {
+  const files = await fs.readdir(source, { withFileTypes: true });
 
-        let totalFiles = files.length;
-        let copiedFiles = 0;
-
-        console.log(`Copying ${totalFiles} files...`);
-
-        files.forEach((file) => {
-          const srcPath = path.join(dirPath, file);
-          const destFile = path.join(destPath, file);
-
-          fs.stat(srcPath, (err, stats) => {
-            if (err) {
-              reject(
-                new Error(
-                  `Failed to stat file: ${srcPath}. Error: ${err.message}`,
-                ),
-              );
-              return;
-            }
-
-            if (stats.isDirectory()) {
-              copyDirectory(file, path.join(destination, file))
-                .then(() => {
-                  copiedFiles++;
-                  updateProgress(totalFiles, copiedFiles);
-                })
-                .catch(reject);
-            } else {
-              try {
-                fs.copyFileSync(srcPath, destFile);
-                copiedFiles++;
-                updateProgress(totalFiles, copiedFiles);
-              } catch (err) {
-                reject(
-                  new Error(
-                    `Failed to copy file: ${srcPath} to ${destFile}. Error: ${err.message}`,
-                  ),
-                );
-              }
-            }
-          });
-        });
-
-        function updateProgress(total, current) {
-          const percentage = Math.floor((current / total) * 100);
-          process.stdout.write(`\rCopied ${percentage}% (${current}/${total})`);
-        }
-
-        // Wait for all promises to resolve
-        setTimeout(() => {
-          if (copiedFiles === totalFiles || copiedFiles === 0) {
-            console.log("\nCopy complete.");
-            resolve();
-          }
-        }, 100); // Small delay to ensure all async ops have completed
-      });
-    });
-  });
+  for (const file of files) {
+    if (!file.isDirectory()) {
+      const srcPath = path.join(source, file.name);
+      const destPath = path.join(destination, file.name);
+      await fs.copyFile(srcPath, destPath);
+    }
+  }
 }
 
 async function createApp(appName) {
   console.log(`Creating ${appName}...`);
 
-  try {
-    const appDir = path.join(process.cwd(), appName);
-    await fs.promises.mkdir(appDir, { recursive: true });
+  const appDir = path.join(process.cwd(), appName);
+  await fs.mkdir(appDir, { recursive: true });
 
-    await copyDirectory(".husky", path.join(appDir, ".husky"));
-    await copyDirectory(".storybook", path.join(appDir, ".storybook"));
-    await copyDirectory("lib", path.join(appDir, "lib"));
-    await copyDirectory("app", path.join(appDir, "app"));
-    await copyDirectory(
-      "playwright-report",
-      path.join(appDir, "playwright-report"),
-    );
-    await copyDirectory("stories", path.join(appDir, "stories"));
-    await copyDirectory("test-results", path.join(appDir, "test-results"));
-    await copyDirectory("tests", path.join(appDir, "tests"));
+  const sourceDir = path.dirname(__dirname); // Get the parent directory of this script
 
-    console.log("\nInstalling dependencies...");
+  const copyPromises = [
+    copyDirectory(path.join(sourceDir, '.husky'), path.join(appDir, '.husky')),
+    copyDirectory(
+      path.join(sourceDir, '.storybook'),
+      path.join(appDir, '.storybook'),
+    ),
+    copyDirectory(path.join(sourceDir, 'lib'), path.join(appDir, 'lib')),
+    copyDirectory(path.join(sourceDir, 'app'), path.join(appDir, 'app')),
+    copyDirectory(
+      path.join(sourceDir, 'playwright-report'),
+      path.join(appDir, 'playwright-report'),
+    ),
+    copyDirectory(
+      path.join(sourceDir, 'stories'),
+      path.join(appDir, 'stories'),
+    ),
+    copyDirectory(
+      path.join(sourceDir, 'test-results'),
+      path.join(appDir, 'test-results'),
+    ),
+    copyDirectory(path.join(sourceDir, 'tests'), path.join(appDir, 'tests')),
+  ];
 
-    process.chdir(appDir);
+  // Copy root files
+  await copyRootFiles(sourceDir, appDir);
 
-    execSync("npm install", { stdio: "inherit" });
+  await Promise.all(copyPromises);
 
-    console.log(`${appName} created successfully.`);
-  } catch (error) {
-    console.error("Error creating app:", error.message);
-    console.error(error.stack);
-  }
+  console.log('\nInstalling dependencies...');
+  process.chdir(appDir);
+
+  return new Promise((resolve, reject) => {
+    exec('npm install', { stdio: 'inherit' }, (error) => {
+      if (error) {
+        reject(new Error(`Failed to install dependencies: ${error.message}`));
+      } else {
+        console.log(`${appName} created successfully.`);
+        resolve();
+      }
+    });
+  });
 }
 
 async function main() {
   let appName;
 
-  if (process.argv.length > 2 && process.argv[2] !== "") {
+  if (process.argv.length > 2 && process.argv[2] !== '') {
     appName = process.argv.slice(2)[0];
   } else {
     appName = await new Promise((resolve) => {
-      readline.question("Please enter your app name: ", resolve);
+      readline.question('Please enter your app name: ', resolve);
     });
   }
 
-  createApp(appName);
-
-  readline.close();
+  try {
+    await createApp(appName);
+  } catch (error) {
+    console.error(error.message);
+  } finally {
+    readline.close();
+  }
 }
 
-main();
-
-module.exports = {
-  copyDirectory,
-};
+if (require.main === module) {
+  main();
+} else {
+  module.exports = { createApp };
+}

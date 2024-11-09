@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
-import Link from "next/link";
-import Disclaimer from "./Disclaimer";
+import { WebsiteCarbonBadge } from 'react-websitecarbon-badge';
+import Link from 'next/link';
+import Disclaimer from './Disclaimer';
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
         <div>
           <p className="text-sm">© a11y-stack | 2024</p>
           <p className="text-sm">
-            Designed and Developed by{" "}
+            Designed and Developed by{' '}
             <Link className="text-accent" href="www.amansinghbhogal.com">
               Aman Singh Bhogal
             </Link>

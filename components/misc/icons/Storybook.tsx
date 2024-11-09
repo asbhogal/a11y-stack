@@ -1,4 +1,4 @@
-import Icon from "@/components/Icon";
+import Icon from '@/components/Icon';
 
 export default function Storybook() {
   return (
@@ -6,9 +6,9 @@ export default function Storybook() {
       title="Storybook logo"
       description="An 'S' inside a bright pink book-shape with a bookmark cut-out in the top right corner"
       svgProps={{
-        fill: "none",
-        viewBox: "0 0 128 128",
-        xmlns: "http://www.w3.org/2000/svg",
+        fill: 'none',
+        viewBox: '0 0 128 128',
+        xmlns: 'http://www.w3.org/2000/svg',
       }}
     >
       <path
