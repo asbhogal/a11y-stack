@@ -14,7 +14,7 @@
     "lint": "next lint",
     "lint-staged": "lint-staged",
     "test": "playwright test",
-    "format": "dlx prettier . --write",
+    "format": "prettier . --write",
     "prepare": "cd ../../ && husky",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
