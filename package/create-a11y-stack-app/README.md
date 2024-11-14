@@ -1,9 +1,10 @@
 <div align="center">
   <h1>a11y-stack</h1>
-</div>
 
 <a href="https://www.npmjs.com/package/create-a11y-stack-app"><img alt="NPM version" src="https://img.shields.io/npm/v/create-a11y-stack-app.svg?style=for-the-badge&labelColor=000000"></a>
 <a href="https://github.com/asbhogal/a11y-stack/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/npm/l/create-a11y-stack-app.svg?style=for-the-badge&labelColor=000000"></a>
+
+</div>
 
 An accessibility-focused, typesafe Next.js frontend stack, built using TypeScript, Next.js (App router), Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod and Husky.
 
@@ -25,4 +26,4 @@ PR's and discussions are welcome to support the continuation of this project. Pl
 
 ## Contact
 
-[support@a11y-stack.com](support@a11y-stack.com)
+[support@a11y-stack.com](mailto:support@a11y-stack.com)
