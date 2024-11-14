@@ -1,4 +1,6 @@
-# a11y-stack
+<div align="center">
+  <h1>a11y-stack</h1>
+</div>
 
 <a href="https://www.npmjs.com/package/create-a11y-stack-app"><img alt="NPM version" src="https://img.shields.io/npm/v/create-a11y-stack-app.svg?style=for-the-badge&labelColor=000000"></a>
 <a href="https://github.com/asbhogal/a11y-stack/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/npm/l/create-a11y-stack-app.svg?style=for-the-badge&labelColor=000000"></a>
