@@ -1,6 +1,6 @@
 {
   "name": "create-a11y-stack-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Accessibility-focused, typesafe Next.js frontend framework stack, complete with Storybook, Tailwind CSS, Shadcn, Playwright, React Hook Form, Zod, Prettier, ES Lint and Husky. ",
   "author": "Aman Singh Bhogal (support@a11y-stack.com)",
   "main": "./bin/index.js",
