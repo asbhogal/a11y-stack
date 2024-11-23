@@ -23,6 +23,10 @@ Modular | Semantic | Extensible
 
 PR's and discussions are welcome to support the continuation of this project. Please read the guidelines before posting an issue or submitting a pull request
 
+## Acknowledgements
+
+ - A big thanks to [Kalon Robson](https://github.com/kalon-robson) for helping to get this project launched.
+
 ## Contact
 
 support@a11y-stack.com
